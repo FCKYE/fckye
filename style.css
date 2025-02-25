@@ -1,0 +1,458 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    color: #ffffff;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.contract-address {
+    background-color: #1a1a1a;
+    padding: 1rem;
+    border-left: 4px solid #ff0000;
+    margin-bottom: 2rem;
+}
+
+.contract-address h2 {
+    margin: 0;
+    color: #ff0000;
+    font-size: 1.2rem;
+}
+
+.contract-address p {
+    margin: 0.5rem 0 0;
+    font-family: monospace;
+    font-size: 0.9rem;
+}
+
+.image-container {
+    width: 100%;
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.kanye-image {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #ff0000;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
+}
+
+.description {
+    background-color: #1a1a1a;
+    padding: 2rem;
+    border-radius: 5px;
+}
+
+.description h1 {
+    color: #ff0000;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+}
+
+.description p {
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.copy-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.button-group {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.copy-btn, .buy-btn {
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Orbitron', sans-serif;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+}
+
+.buy-btn {
+    background-color: #00cc00;
+}
+
+.copy-btn:hover {
+    background-color: #cc0000;
+    transform: translateY(-2px);
+}
+
+.buy-btn:hover {
+    background-color: #009900;
+    transform: translateY(-2px);
+}
+
+.copy-btn.copied {
+    background-color: #28a745;
+}
+
+.blood-text {
+    text-align: center;
+    margin: 3rem 0;
+}
+
+.dripping-text {
+    font-family: 'Nosifer', cursive;
+    font-size: 4.5rem;
+    color: #ff0000;
+    position: relative;
+    margin: 0.5rem 0;
+    text-shadow: 
+        2px 2px 0 #800000,
+        -2px -2px 0 #800000,
+        2px -2px 0 #800000,
+        -2px 2px 0 #800000;
+    letter-spacing: 2px;
+}
+
+.offset {
+    margin-left: 1rem;
+    font-size: 3.5rem;
+}
+
+/* Blood drips */
+.dripping-text::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: 0;
+    right: 0;
+    height: 120%;
+    background-image: 
+        radial-gradient(circle at 15% 0, #ff0000 0, transparent 45%),
+        radial-gradient(circle at 35% 0, #ff0000 0, transparent 40%),
+        radial-gradient(circle at 55% 0, #ff0000 0, transparent 35%),
+        radial-gradient(circle at 75% 0, #ff0000 0, transparent 45%),
+        radial-gradient(circle at 90% 0, #ff0000 0, transparent 40%);
+    filter: blur(3px) contrast(130%);
+    opacity: 0;
+    animation: bloodDrip 4s infinite;
+    pointer-events: none;
+}
+
+@keyframes bloodDrip {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    20% {
+        opacity: 0.8;
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+}
+
+.content-section {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 2rem;
+    margin: 2rem 0;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 0, 0, 0.3);
+}
+
+.content-section h2 {
+    color: #ff0000;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.content-section p {
+    color: #ffffff;
+    line-height: 1.6;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+/* Artistic Divider */
+.artistic-divider {
+    text-align: center;
+    margin: 4rem 0;
+    position: relative;
+    padding: 1.5rem 0;
+}
+
+.artistic-divider span {
+    font-family: 'Permanent Marker', cursive;
+    color: #ffffff;
+    font-size: 3.2rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    position: relative;
+    background: #000;
+    padding: 0 2rem;
+    text-shadow: 
+        0 0 10px rgba(255, 255, 255, 0.8),
+        0 0 20px rgba(255, 255, 255, 0.4),
+        0 0 30px rgba(255, 255, 255, 0.2),
+        2px 2px 4px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(180deg, #fff, #ccc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 
+            0 0 10px rgba(255, 255, 255, 0.8),
+            0 0 20px rgba(255, 255, 255, 0.4),
+            0 0 30px rgba(255, 255, 255, 0.2);
+    }
+    to {
+        text-shadow: 
+            0 0 20px rgba(255, 255, 255, 0.8),
+            0 0 30px rgba(255, 255, 255, 0.4),
+            0 0 40px rgba(255, 255, 255, 0.2);
+    }
+}
+
+.divider-line {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.2) 20%,
+        rgba(255, 255, 255, 0.5) 50%,
+        rgba(255, 255, 255, 0.2) 80%,
+        transparent
+    );
+    z-index: -1;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+@media (max-width: 768px) {
+    .artistic-divider {
+        margin: 3rem 0;
+        padding: 1rem 0;
+    }
+    
+    .artistic-divider span {
+        font-size: 2.2rem;
+        letter-spacing: 2px;
+    }
+}
+
+/* Fair Launch Banner */
+.fair-launch-banner {
+    background: linear-gradient(90deg, #ff0000, #990000);
+    text-align: center;
+    padding: 1rem;
+    margin: 1rem -2rem 2rem -2rem;
+    border-radius: 8px;
+}
+
+.fair-launch-banner span {
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 4px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.tokenomics-note {
+    text-align: center;
+    color: #ff9999;
+    font-size: 1.1rem;
+    margin-top: 2rem;
+    padding: 1rem;
+    border-top: 1px solid rgba(255, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+    
+    .description h1 {
+        font-size: 2rem;
+    }
+    .dripping-text {
+        font-size: 3rem;
+    }
+    .offset {
+        font-size: 2.5rem;
+        margin-left: 0.5rem;
+    }
+    .tokenomics-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .fair-launch-banner span {
+        font-size: 1.2rem;
+    }
+}
+
+/* Tokenomics Grid */
+.tokenomics-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.tokenomics-item {
+    background: rgba(255, 0, 0, 0.1);
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid rgba(255, 0, 0, 0.2);
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.tokenomics-item:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 0, 0, 0.15);
+}
+
+.tokenomics-item h3 {
+    color: #ff0000;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.tokenomics-item p {
+    color: #ffffff;
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+/* Truth List */
+.truth-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.truth-list li {
+    color: #ffffff;
+    padding: 1rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    font-size: 1.1rem;
+    border-bottom: 1px solid rgba(255, 0, 0, 0.1);
+}
+
+.truth-list li:last-child {
+    border-bottom: none;
+}
+
+.truth-list li::before {
+    content: '⚠️';
+    position: absolute;
+    left: 0;
+    font-size: 1.2rem;
+}
+
+.impact-statement {
+    margin-top: 2rem;
+    padding: 1rem;
+    background: rgba(255, 0, 0, 0.1);
+    border-left: 3px solid #ff0000;
+    font-size: 1.2rem;
+    color: #ff9999;
+    font-style: italic;
+}
+
+@media (max-width: 768px) {
+    .truth-list li {
+        font-size: 1rem;
+        padding: 0.8rem 0;
+        padding-left: 1.5rem;
+    }
+    
+    .impact-statement {
+        font-size: 1.1rem;
+        padding: 0.8rem;
+    }
+}
+
+/* Origin Story Styles */
+.origin-story {
+    color: #ffffff;
+}
+
+.highlight-text {
+    font-size: 1.3rem;
+    color: #ff3333;
+    font-weight: 500;
+    border-left: 3px solid #ff0000;
+    padding-left: 1rem;
+    margin-bottom: 2rem;
+}
+
+.emphasis-text {
+    font-size: 1.2rem;
+    color: #ff9999;
+    margin: 2rem 0 1rem 0;
+}
+
+.impact-quote {
+    background: rgba(255, 0, 0, 0.1);
+    border-left: 3px solid #ff0000;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #ffffff;
+}
+
+.conclusion-text {
+    font-size: 1.4rem;
+    color: #ff0000;
+    text-align: center;
+    margin: 2rem 0;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+@media (max-width: 768px) {
+    .copy-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .button-group {
+        justify-content: center;
+        margin-top: 0.5rem;
+    }
+    
+    .copy-btn, .buy-btn {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
+    }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nosifer&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
